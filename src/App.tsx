@@ -58,13 +58,9 @@ function App() {
     if (!value) {
       return;
     }
+    console.log(value);
     const copy = async () => {
-      const type = "text/plain";
-      const clipboardItemData = {
-        [type]: value,
-      };
-      const clipboardItem = new ClipboardItem(clipboardItemData);
-      await navigator.clipboard.write([clipboardItem]);
+      await navigator.clipboard.writeText(value);
     };
     copy();
   };
