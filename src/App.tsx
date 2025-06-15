@@ -33,7 +33,6 @@ function App() {
           cleanQueryParams.set(k, v);
         }
       }
-      console.log(cleanQueryParams);
       let value = url.protocol + "//" + url.host + url.pathname;
 
       if (cleanQueryParams.size > 0) {
